@@ -2,19 +2,17 @@ import { useState } from "react";
 import SectionHeader from "./SectionHeader";
 
 const revenueData = [
-  { month: "Mes 1", massagists: 2, perWeek: 10, gross: 700, commission: 196 },
-  { month: "Mes 2", massagists: 3, perWeek: 20, gross: 1400, commission: 392 },
-  { month: "Mes 3", massagists: 4, perWeek: 35, gross: 2450, commission: 686 },
-  { month: "Mes 6", massagists: 8, perWeek: 80, gross: 5600, commission: 1568 },
-  { month: "Mes 12", massagists: 15, perWeek: 180, gross: 12600, commission: 3528 },
+  { month: "Mes 1", massagists: 2, perWeek: 10, gross: 600, commission: 240 },
+  { month: "Mes 2", massagists: 3, perWeek: 20, gross: 1200, commission: 480 },
+  { month: "Mes 3", massagists: 4, perWeek: 35, gross: 2100, commission: 840 },
+  { month: "Mes 6", massagists: 8, perWeek: 80, gross: 4800, commission: 1920 },
+  { month: "Mes 12", massagists: 15, perWeek: 180, gross: 10800, commission: 4320 },
 ];
 
 const expenses = [
-  { concept: "Publicidad Meta (Instagram/Facebook)", range: "150–300 €", icon: "📣" },
+  { concept: "Publicidad Meta (Instagram/Facebook)", range: "10% beneficio", icon: "📣" },
   { concept: "Herramientas de reservas (Bookeo/Reservio)", range: "30–60 €", icon: "📅" },
-  { concept: "Herramientas IA para vídeos (Runway, ElevenLabs)", range: "50–100 €", icon: "🤖" },
-  { concept: "Dominio + hosting web", range: "10–20 €", icon: "🌐" },
-  { concept: "Imprevistos y materiales", range: "50 €", icon: "🔧" },
+  { concept: "Imprevistos y materiales", range: "30–50 €", icon: "🔧" },
 ];
 
 export default function Financials() {
@@ -28,7 +26,7 @@ export default function Financials() {
         number="10"
         emoji="💰"
         title="Proyección Financiera"
-        subtitle="Escenario conservador — Precio medio de 70 € por masaje, comisión 28%"
+        subtitle="Escenario realista Barcelona — Precio máximo de 60 € por masaje, comisión 40%"
       />
 
       {/* Interactive chart */}
@@ -73,7 +71,7 @@ export default function Financials() {
             { label: "Masajistas activas", value: selected.massagists, icon: "👩", unit: "" },
             { label: "Masajes/semana", value: selected.perWeek, icon: "💆", unit: "" },
             { label: "Ingreso bruto", value: selected.gross.toLocaleString(), icon: "💵", unit: " €" },
-            { label: "Comisión 28%", value: selected.commission.toLocaleString(), icon: "🏦", unit: " €", highlight: true },
+            { label: "Comisión 40%", value: selected.commission.toLocaleString(), icon: "🏦", unit: " €", highlight: true },
           ].map((stat) => (
             <div
               key={stat.label}
@@ -96,7 +94,7 @@ export default function Financials() {
 
         <div className="mt-4 flex items-start gap-2 text-xs text-gray-400 p-3 bg-gray-50 rounded-xl">
           <span>ℹ️</span>
-          <span>Clic en las barras para ver el detalle de cada mes. Precio medio: <strong>70 €/masaje</strong> · Comisión: <strong>28%</strong></span>
+          <span>Clic en las barras para ver el detalle de cada mes. Precio máximo: <strong>60 €/masaje</strong> · Comisión plataforma: <strong>40%</strong></span>
         </div>
       </div>
 
@@ -111,7 +109,7 @@ export default function Financials() {
                 <th className="pb-3">Masajistas</th>
                 <th className="pb-3">Masajes/sem</th>
                 <th className="pb-3">Ingreso bruto</th>
-                <th className="pb-3 text-rose-600">Comisión (28%)</th>
+                <th className="pb-3 text-rose-600">Comisión (40%)</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50">
@@ -151,7 +149,7 @@ export default function Financials() {
             <span className="text-xl">💡</span>
             <span className="font-bold text-gray-800">Total mensual estimado</span>
           </div>
-          <div className="text-xl font-extrabold text-rose-600">~290–530 €</div>
+          <div className="text-xl font-extrabold text-rose-600">~30–60 € + 10% beneficio</div>
         </div>
       </div>
     </section>

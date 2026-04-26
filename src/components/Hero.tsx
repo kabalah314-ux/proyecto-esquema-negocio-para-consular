@@ -42,10 +42,10 @@ export default function Hero() {
         {/* Stats row */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
           {[
-            { emoji: "💰", value: "25–30%", label: "Comisión plataforma" },
-            { emoji: "👩", value: "10 servicios", label: "Catálogo inicial" },
+            { emoji: "💰", value: "40%", label: "Comisión plataforma" },
+            { emoji: "🏷️", value: "60€", label: "Precio máximo" },
             { emoji: "📱", value: "3 plataformas", label: "Redes sociales" },
-            { emoji: "📈", value: "~3.528 €/mes", label: "Proyección mes 12" },
+            { emoji: "📈", value: "~4.320 €/mes", label: "Proyección mes 12" },
           ].map((stat) => (
             <div
               key={stat.label}

@@ -18,7 +18,7 @@ const legalItems = [
   {
     icon: "🔢",
     title: "IAE",
-    detail: "Epígrafe 839 (masajistas) o 751 (intermediación de servicios)",
+    detail: "Epígrafe 751 (intermediación de servicios), el más preciso para este modelo. Alternativo: 839 (masajistas)",
     status: "Obligatorio",
     color: "bg-red-50 border-red-200 text-red-800",
   },

@@ -6,14 +6,14 @@ const steps = [
   { icon: "📅", title: "Reserva", desc: "La clienta elige servicio, fecha y hora. Paga online con Stripe (100% del importe)" },
   { icon: "🔀", title: "Asignación", desc: "El sistema asigna automáticamente a la masajista disponible en la zona" },
   { icon: "🏠", title: "Servicio", desc: "La masajista acude al domicilio de la clienta y ejecuta el masaje" },
-  { icon: "💸", title: "Comisión", desc: "La plataforma retiene el 25–30%. La masajista recibe el 70–75% semanalmente" },
+  { icon: "💸", title: "Comisión", desc: "La plataforma retiene el 40%. La masajista recibe el 60% semanalmente" },
   { icon: "⭐", title: "Fidelización", desc: "Solicitud automática de reseña + recordatorio para siguiente sesión" },
 ];
 
 const commissionData = [
-  { label: "Precio al cliente", value: "60–90 €", color: "bg-rose-100 text-rose-700", wide: true },
-  { label: "Comisión plataforma (28%)", value: "~18–21 €", color: "bg-purple-100 text-purple-700", wide: false },
-  { label: "Cobro neto masajista (72%)", value: "~49–52 €", color: "bg-emerald-100 text-emerald-700", wide: false },
+  { label: "Precio máximo cliente", value: "60 €", color: "bg-rose-100 text-rose-700", wide: true },
+  { label: "Comisión plataforma (40%)", value: "24 €", color: "bg-purple-100 text-purple-700", wide: false },
+  { label: "Cobro neto masajista (60%)", value: "36 €", color: "bg-emerald-100 text-emerald-700", wide: false },
 ];
 
 export default function BusinessModel() {
@@ -81,21 +81,21 @@ export default function BusinessModel() {
       {/* Commission breakdown */}
       <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-rose-100 mb-8">
         <h3 className="text-lg font-bold text-gray-800 mb-2">Estructura de Comisiones</h3>
-        <p className="text-sm text-gray-500 mb-6">Ejemplo con masaje de 70 €</p>
+        <p className="text-sm text-gray-500 mb-6">Ejemplo con masaje de 60 €</p>
 
         {/* Visual bar */}
         <div className="mb-6">
           <div className="flex h-10 rounded-xl overflow-hidden shadow-inner">
-            <div className="w-[28%] bg-gradient-to-r from-purple-400 to-purple-500 flex items-center justify-center text-white text-xs font-bold">
-              28% Plataforma
+            <div className="w-[40%] bg-gradient-to-r from-purple-400 to-purple-500 flex items-center justify-center text-white text-xs font-bold">
+              40% Plataforma
             </div>
-            <div className="w-[72%] bg-gradient-to-r from-emerald-400 to-emerald-500 flex items-center justify-center text-white text-xs font-bold">
-              72% Masajista
+            <div className="w-[60%] bg-gradient-to-r from-emerald-400 to-emerald-500 flex items-center justify-center text-white text-xs font-bold">
+              60% Masajista
             </div>
           </div>
           <div className="flex justify-between text-xs text-gray-400 mt-1 px-1">
-            <span>~19,60 €</span>
-            <span>~50,40 €</span>
+            <span>24 €</span>
+            <span>36 €</span>
           </div>
         </div>
 
@@ -114,7 +114,7 @@ export default function BusinessModel() {
         <div className="mt-4 p-4 bg-amber-50 border border-amber-200 rounded-2xl flex gap-3">
           <span className="text-xl">💡</span>
           <p className="text-sm text-amber-800">
-            <strong>Referencia de mercado:</strong> Plataformas como Taskia aplican comisiones del 15%. Para un modelo con gestión completa de agenda, pago y captación, el <strong>25–30% es competitivo y justificable</strong>.
+            <strong>Estrategia de lanzamiento:</strong> Establecemos un tope de <strong>60€ por sesión</strong> para dominar el mercado de Barcelona, asegurando un margen del <strong>40% para la plataforma</strong> que permite reinvertir en captación inteligente.
           </p>
         </div>
       </div>
@@ -122,9 +122,9 @@ export default function BusinessModel() {
       {/* Comparison cards */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {[
-          { icon: "🛵", name: "Glovo", model: "Reparte comida", similarity: "Modelo plataforma intermediaria", color: "from-orange-400 to-orange-500" },
-          { icon: "🚗", name: "Uber", model: "Conecta conductores", similarity: "Freelances bajo marca", color: "from-gray-600 to-gray-700" },
-          { icon: "🌿", name: "MasajesHome", model: "Masajes a domicilio", similarity: "¡Este es tu modelo!", color: "from-rose-500 to-pink-600", highlight: true },
+          { icon: "✨", name: "Treatwell", model: "Marketplace belleza", similarity: "Intermediación en salón", color: "from-slate-700 to-slate-800" },
+          { icon: "💆", name: "Urban", model: "Bienestar a domicilio", similarity: "Líder en servicios premium", color: "from-blue-500 to-blue-600" },
+          { icon: "🌿", name: "MasajesHome", model: "Masajes a domicilio", similarity: "¡Tu modelo optimizado!", color: "from-rose-500 to-pink-600", highlight: true },
         ].map((c) => (
           <div
             key={c.name}

@@ -17,7 +17,7 @@ const valueProps = [
 ];
 
 const legalPoints = [
-  { icon: "📋", title: "Porcentaje de comisión", desc: "25–30% para la plataforma, documentado y acordado" },
+  { icon: "📋", title: "Porcentaje de comisión", desc: "40% para la plataforma, documentado y acordado" },
   { icon: "📆", title: "Tiempos de pago", desc: "Transferencia semanal o quincenal según acuerdo" },
   { icon: "❌", title: "Política de cancelaciones", desc: "Protocolo claro para cancelaciones de clientas" },
   { icon: "🏷️", title: "Uso de la marca", desc: "Uniformidad del servicio y presentación de marca" },
@@ -42,7 +42,7 @@ export default function MassagistManagement() {
           <div>
             <h3 className="text-2xl font-extrabold mb-2">El argumento perfecto para captar masajistas</h3>
             <p className="text-emerald-100 text-lg font-medium">
-              "Tú haces los masajes, <strong className="text-white">nosotros ponemos los clientes</strong>."
+              "Tú haces los masajes, nosotros ponemos los clientes. Comisión del 40% sobre un precio máximo de 60€. <strong className="text-white">Tú te llevas 36€ netos por sesión.</strong>"
             </p>
             <p className="text-emerald-200 text-sm mt-2">
               Sin inversión en marketing · Agenda controlada · Cobro garantizado · Flexibilidad total
